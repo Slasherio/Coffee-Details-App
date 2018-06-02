@@ -1,0 +1,29 @@
+.sidebar{
+    width: 45px;
+    background: #fff;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+
+.sidebar > ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.sidebar > ul > li a{
+    display: inline-block;
+    padding: 10px;
+}
+
+.sidebar-icon{
+    height: 28px;	
+    width: 53px;	
+    color: #91A1DF;	
+}
