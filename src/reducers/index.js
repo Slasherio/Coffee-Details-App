@@ -1,9 +1,9 @@
 import { routerReducer } from "react-router-redux";
 import { combineReducers } from "redux";
-import { counterReducer } from "./counterReducer/counterReducer";
+import products from "./productsReducer/productsReducer";
 
 const rootReducers = combineReducers({
-  counterReducer,
+  products,
   routing: routerReducer
 });
 
