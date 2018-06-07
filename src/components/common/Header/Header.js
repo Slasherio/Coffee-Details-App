@@ -1,6 +1,6 @@
 import React from "react";
 import "./Header.css";
-import logo from "../../images/logo.png";
+import logo from "../../../images/logo.png";
 
 import FaSearch from "react-icons/lib/fa/search";
 import FaBellO from "react-icons/lib/fa/bell-o";

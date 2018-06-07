@@ -1,14 +1,26 @@
-import { fetchingError, receiveData, fetching } from "../common";
-import store from "../../store/store";
 import ProductsService from "../../config/productService";
+import {
+  FETCHING_PRODUCT_DETAIL,
+  FETCHED_PRODUCT_DETAIL
+} from "../../config/constants";
 
-export const getProductDetail = id => dispatch => {
-  dispatch(fetching());
-  return ProductsService.getProductById(id)
-    .then(data => dispatch(receiveData(data)))
-    .catch(error => dispatch(fetchingError(error)));
+const fetchingProductDetail = payload => {
+  return {
+    type: FETCHING_PRODUCT_DETAIL,
+    payload
+  };
 };
 
-export const dispatchGetProductDetailWired = payload => {
-  getProductDetail(payload)(store.dispatch);
+const fetchedProductDetail = payload => {
+  return {
+    type: FETCHED_PRODUCT_DETAIL,
+    payload
+  };
+};
+
+export const getProductDetail = id => dispatch => {
+  dispatch(fetchingProductDetail(id));
+  ProductsService.getProductById(id).then(data =>
+    setTimeout(() => dispatch(fetchedProductDetail(data)), 3000)
+  );
 };

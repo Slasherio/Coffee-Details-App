@@ -15,37 +15,37 @@ const Navigation = () => {
     <aside className="sidebar">
       <ul>
         <li>
-          <Link to="/">
+          <Link to="/products">
             <FaHome className="sidebar-icon" />
           </Link>
         </li>
         <li>
-          <Link to="/">
+          <Link to="/products">
             <MdDashboard className="sidebar-icon" />
           </Link>
         </li>
         <li>
-          <Link to="/">
+          <Link to="/products">
             <MdShowChart className="sidebar-icon" />
           </Link>
         </li>
         <li>
-          <Link to="/">
+          <Link to="/products">
             <MdBookmark className="sidebar-icon" />
           </Link>
         </li>
         <li>
-          <Link to="/">
+          <Link to="/products">
             <FaFile className="sidebar-icon" />
           </Link>
         </li>
         <li>
-          <Link to="/">
+          <Link to="/products">
             <MdHelp className="sidebar-icon" />
           </Link>
         </li>
       </ul>
-      <Link to="/">
+      <Link to="/products">
         <MdSettings className="sidebar-icon" />
       </Link>
     </aside>

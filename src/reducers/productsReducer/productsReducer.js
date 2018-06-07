@@ -3,11 +3,11 @@ import { STARTED_LOAD, LOADED, LOAD_ERROR } from "../../config/constants";
 const initialState = {
   fetching: false,
   fetched: false,
-  data: [],
+  productsData: [],
   error: null
 };
 
-export default (state = initialState, action) => {
+export const products = (state = initialState, action) => {
   switch (action.type) {
     case STARTED_LOAD:
       return {
@@ -19,7 +19,7 @@ export default (state = initialState, action) => {
         ...state,
         fetching: false,
         fetched: true,
-        data: action.payload
+        productsData: action.payload.data
       };
     case LOAD_ERROR:
       return {

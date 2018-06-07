@@ -1,0 +1,15 @@
+.table-header{
+    color: rgba(56,56,56,0.4);
+    margin: 10px;
+    padding: 10px;
+  font-weight: 600;
+}
+
+.product__detail-row{
+background: white;
+padding: 12px;
+}
+
+.detail{
+  margin-bottom: 20px;
+}

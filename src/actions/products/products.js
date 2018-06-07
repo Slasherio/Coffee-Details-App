@@ -1,14 +1,9 @@
 import { fetchingError, receiveData, fetching } from "../common";
-import store from "../../store/store";
 import ProductsService from "../../config/productService";
 
-export const getAllProducts = () => dispatch => {
+export const getAllProducts = () => async dispatch => {
   dispatch(fetching());
-  return ProductsService.getAllProducts()
-    .then(products => dispatch(receiveData(products)))
+  ProductsService.getAllProducts()
+    .then(data => setTimeout(() => dispatch(receiveData(data)), 3000))
     .catch(error => dispatch(fetchingError(error)));
-};
-
-export const dispatchGetAllProductsWired = () => {
-  getAllProducts()(store.dispatch);
 };

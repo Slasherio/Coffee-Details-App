@@ -1,19 +1,31 @@
 import React from "react";
 import { render } from "react-dom";
 import { Provider } from "react-redux";
+
 import store from "./store/store";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+
+import {
+  Redirect,
+  BrowserRouter as Router,
+  Route,
+  browserHistory
+} from "react-router-dom";
+
 import App from "./containers/App/App";
-import Products from "./containers/ProductsContainer/Products";
-import ProductDetail from "./containers/ProductsDetailContainer/ProductDetailContainer";
+import ProductListContainer from "./containers/ProductListContainer/ProductListContainer";
+import ProductDetailContainer from "./containers/ProductDetailContainer/ProductDetailContainer";
+
 import "bootstrap/dist/css/bootstrap.min.css";
+
+// const history = syncHistoryWithStore(store);
 
 render(
   <Provider store={store}>
     <Router>
       <App>
-        <Route exact path="/products" component={Products} />
-        <Route path="/products/:id" component={ProductDetail} />
+        {/* <Redirect exact from="/" to="/products" /> */}
+        <Route exact path="/products" component={ProductListContainer} />
+        <Route path="/products/:id" component={ProductDetailContainer} />
       </App>
     </Router>
   </Provider>,

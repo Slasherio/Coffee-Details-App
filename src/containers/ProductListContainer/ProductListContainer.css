@@ -1,0 +1,8 @@
+.react-skeleton-load {
+  margin: 10px;
+}
+
+.preload-content > span {
+  display: flex;
+  flex-wrap: wrap;
+}

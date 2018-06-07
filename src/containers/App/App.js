@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import Navigation from "../../components/Navigation/Navigation";
-import Header from "../../components/Header/Header";
+import Header from "../../components/common/Header/Header";
+import Navigation from "../../components/common/Navigation/Navigation";
 import "./App.css";
 
 export default class App extends Component {

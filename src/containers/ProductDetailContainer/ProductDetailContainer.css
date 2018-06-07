@@ -1,0 +1,4 @@
+.table-preload > span {
+  display: flex;
+  justify-content: space-between;
+}
